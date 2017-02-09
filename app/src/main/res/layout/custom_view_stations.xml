@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/availability_shape"
+        android:src="@drawable/availability_shape"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Station"
+        android:id="@+id/stationName"
+        android:layout_alignTop="@+id/availability_shape"
+        android:layout_toRightOf="@+id/availability_shape"
+        android:layout_toEndOf="@+id/availability_shape" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Location"
+        android:id="@+id/stationLocation"
+        android:layout_alignBottom="@+id/availability_shape"
+        android:layout_alignLeft="@+id/stationName"
+        android:layout_alignStart="@+id/stationName" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/distance_icon"
+        android:src="@drawable/ic_place_green_24dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="0dp"
+        android:layout_marginEnd="17dp"
+        android:layout_alignTop="@+id/stationName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/stationDistance"
+        android:layout_alignBottom="@+id/stationLocation"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/icons"
+        android:textSize="35sp"
+        android:text="5"
+        android:id="@+id/numberOfBikesAvailable"
+        android:layout_alignBottom="@+id/stationLocation"
+        android:layout_alignRight="@+id/availability_shape"
+        android:layout_alignEnd="@+id/availability_shape"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="4dp" />
+
+</RelativeLayout>

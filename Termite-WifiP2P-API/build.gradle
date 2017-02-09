@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('Termite-WifiP2P-API.aar'))

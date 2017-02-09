@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="pt.ulisboa.tecnico.cmov.ubibike">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".Utilities.GlobalClass"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <service android:name="pt.inesc.termite.wifidirect.service.SimWifiP2pService" />
+
+        <receiver android:name=".Utilities.NetworkDetector">
+            <intent-filter>
+            <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".Login.Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Station.Station"
+            android:label="@string/station"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Login.Register"
+            android:label="@string/Register"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Login.Login" />
+        </activity>
+        <activity
+            android:name=".History.History"
+            android:label="@string/History"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Station.Station" />
+        </activity>
+        <activity android:name=".History.HistorySelected">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".History.History" />
+        </activity>
+        <activity
+            android:name=".Friends.ChatActivity"
+            android:label="@string/Chat"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Friends.Friends" />
+        </activity>
+        <activity
+            android:name=".Friends.Friends"
+            android:label="@string/Friends"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Station.Station" />
+        </activity>
+        <activity
+            android:name=".Friends.SendPoints"
+            android:label="Send Points"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Friends.Friends" />
+            >
+        </activity>
+        <activity
+            android:name=".Friends.SendPointsTo"
+            android:label="Send Points">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Friends.Friends" />
+            >
+        </activity>
+        <activity
+            android:name=".Friends.SendMessageTo"
+            android:label="Send Message">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Friends.Friends" />
+            >
+        </activity>
+        <activity android:name=".Friends.MsgSenderActivity" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Maps.MapsActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".Maps.DisplayRoute"
+            android:label="@string/title_activity_display_route"></activity>
+    </application>
+
+</manifest>

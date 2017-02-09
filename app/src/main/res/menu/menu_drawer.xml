@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_stations"
+            android:icon="@drawable/ic_pin_drop"
+            android:title="@string/Stations" />
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/ic_group"
+            android:title="@string/Friends" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_beenhere_24dp"
+            android:title="@string/History" />
+    </group>
+
+    <item android:title="User information">
+        <menu>
+            <item
+                android:id="@+id/nav_user_name"
+                android:icon="@drawable/ic_account_box_black_24dp"
+                android:title="" />
+            <item
+                android:id="@+id/nav_user_email"
+                android:icon="@drawable/ic_mail_black_24dp"
+                android:title="" />
+            <item
+                android:id="@+id/nav_user_points"
+                android:icon="@drawable/ic_poll_black_24dp"
+                android:title="" />
+        </menu>
+    </item>
+
+</menu>
